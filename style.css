@@ -1,0 +1,112 @@
+:root{
+  --primary-rgb: rgba(17, 106, 179, 0.8);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen{
+  width: 500px;
+  border: 3px solid var(--primary-rgb);
+  aspect-ratio: 10 / 16;
+  border-radius: 1rem;
+  background-color: rgba(17, 106, 179, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.screen-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("/image.jpg");
+  background-size: 300%;
+  background-position: center;
+  animation: pan-image 15s linear infinite;
+  position:absolute;
+}
+.screen-overlay{
+  background-image: linear-gradient(rgba(17, 106, 179, 0.15), rgba(17, 106, 179, 0.15) 3px, transparent 3px, transparent 9px);
+  background-size: 100% 9px;
+  width: 100%;
+  height: 100%;
+  animation: pan-overlay 22s infinite linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to{
+    background-position: 0% -100%;
+  }
+}
+
+@keyframes pan-image {
+  0% {
+    background-position: 36% 42%;
+    background-size: 250%;
+  }
+
+  20% {
+    background-position: 30% 35%;
+    background-size: 250%;
+  }
+
+  20.0001% {
+    background-position: 60% 85%;
+      background-size: 500%;
+  }
+
+  40% {
+
+    background-position: 49% 81%;
+      background-size: 500%;
+  }
+
+  40.0001% {
+
+    background-position: 80% 42%;
+      background-size: 300%;
+  }
+  
+  60% {
+  
+    background-position: 84% 33%;
+    background-size: 300%;
+  }
+
+  60.0001% {
+    background-position: 0% 0%;
+    background-size: 300%;
+  }
+
+  80%{
+    background-position: 15% 4%;
+      background-size: 300%;
+  }
+
+  80.0001% {
+    background-position: 50% 50%;
+    background-size: 800%;
+  }
+
+  100% {
+    background-position: 55% 55%;
+    background-size: 800%;
+  }
+}
