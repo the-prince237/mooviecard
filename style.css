@@ -34,6 +34,7 @@ body{
   background-position: center;
   animation: pan-image 15s linear infinite;
   position:absolute;
+  z-index: 1;
 }
 .screen-overlay{
   background-image: linear-gradient(rgba(17, 106, 179, 0.15), rgba(17, 106, 179, 0.15) 3px, transparent 3px, transparent 9px);
@@ -44,6 +45,13 @@ body{
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 2;
+}
+
+.screen-content{
+  position: absolute;
+  z-index: 3;
+  color: black;
 }
 
 @keyframes pan-overlay {
