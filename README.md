@@ -1,2 +1,0 @@
-# mooviecard
-just having fun
